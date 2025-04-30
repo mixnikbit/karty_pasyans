@@ -1,50 +1,28 @@
 
-const cards = ['бабочка.png', 'большой костёр.png', 'будильник.png', 'венок.png', 'весы.png', 'голубь.png', 'две сабли.png', 'железная дорога.png', 'жук.png', 'журнальный столик.png', 'замок.png', 'змея.png', 'ключ.png', 'книга.png', 'колокол.png', 'коса.png', 'лампочка.png', 'маленький костёр.png', 'мельница.png', 'монета.png', 'неожиданность.png', 'облако.png', 'очки.png', 'папка с документами.png', 'парусник.png', 'подарок.png', 'подкова.png', 'праздничный стол.png', 'руки.png', 'свеча.png', 'сердце.png', 'серп.png', 'солнце.png', 'тропинка.png', 'удар.png', 'флаг.png', 'фужер.png', 'храм.png', 'человек на льдине.png', 'череп.png', 'якорь.png'];
-let cardMeanings = {};
+const cards = ['babochka.png', 'bolshoy_koster.png', 'budilnik.png', 'venok.png', 'vesy.png', 'golub.png', 'dve_sabli.png', 'zheleznaya_doroga.png', 'zhuk.png', 'zhurnalnyy_stolik.png', 'zamok.png', 'zmeya.png', 'klyuch.png', 'kniga.png', 'kolokol.png', 'kosa.png', 'lampochka.png', 'malenkiy_koster.png', 'melnitsa.png', 'moneta.png', 'neozhidannost.png', 'oblako.png', 'ochki.png', 'papka_s_dokumentami.png', 'parusnik.png', 'podarok.png', 'podkova.png', 'prazdnichnyy_stol.png', 'ruki.png', 'svecha.png', 'serdtse.png', 'serp.png', 'solntse.png', 'tropinka.png', 'udar.png', 'flag.png', 'fuzher.png', 'hram.png', 'chelovek_na_ldine.png', 'cherep.png', 'yakor.png'];
+let cardMeanings = {"babochka.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Babochka.", "bolshoy_koster.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Bolshoy koster.", "budilnik.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Budilnik.", "venok.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Venok.", "vesy.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Vesy.", "golub.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Golub.", "dve_sabli.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Dve sabli.", "zheleznaya_doroga.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Zheleznaya doroga.", "zhuk.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Zhuk.", "zhurnalnyy_stolik.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Zhurnalnyy stolik.", "zamok.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Zamok.", "zmeya.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Zmeya.", "klyuch.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Klyuch.", "kniga.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Kniga.", "kolokol.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Kolokol.", "kosa.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Kosa.", "lampochka.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Lampochka.", "malenkiy_koster.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Malenkiy koster.", "melnitsa.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Melnitsa.", "moneta.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Moneta.", "neozhidannost.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Neozhidannost.", "oblako.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Oblako.", "ochki.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Ochki.", "papka_s_dokumentami.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Papka s dokumentami.", "parusnik.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Parusnik.", "podarok.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Podarok.", "podkova.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Podkova.", "prazdnichnyy_stol.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Prazdnichnyy stol.", "ruki.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Ruki.", "svecha.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Svecha.", "serdtse.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Serdtse.", "serp.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Serp.", "solntse.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Solntse.", "tropinka.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Tropinka.", "udar.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Udar.", "flag.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Flag.", "fuzher.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Fuzher.", "hram.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Hram.", "chelovek_na_ldine.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Chelovek na ldine.", "cherep.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Cherep.", "yakor.png": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043a\u0430\u0440\u0442\u044b: Yakor."};
 let comboMeanings = {};
 
-// Загрузка значений карт
-fetch('data/cards.json')
-    .then(response => response.json())
-    .then(data => {
-        cardMeanings = data;
-    });
-
-// Загрузка значений сочетаний
-fetch('data/combinations.json')
-    .then(response => response.json())
-    .then(data => {
-        comboMeanings = data;
-    });
-
 function drawSingleCard() {
-    const randomIndex = Math.floor(Math.random() * cards.length);
-    const card = cards[randomIndex];
-    const meaning = cardMeanings[card] || "Значение карты не указано.";
-
-    document.getElementById('card-container').innerHTML = `
-        <img src="images/${card}" alt="${card}">
-        <p><strong>${meaning}</strong></p>
-    `;
+    const card = cards[Math.floor(Math.random() * cards.length)];
+    const meaning = cardMeanings[card] || "Нет описания.";
+    document.getElementById('card-container').innerHTML = `<img src="images/${card}" alt=""><p>${meaning}</p>`;
 }
 
 function drawCardPair() {
-    let firstIndex = Math.floor(Math.random() * cards.length);
-    let secondIndex;
+    let first, second;
     do {
-        secondIndex = Math.floor(Math.random() * cards.length);
-    } while (secondIndex === firstIndex);
+        first = cards[Math.floor(Math.random() * cards.length)];
+        second = cards[Math.floor(Math.random() * cards.length)];
+    } while (first === second);
 
-    const firstCard = cards[firstIndex];
-    const secondCard = cards[secondIndex];
-    const pairKey1 = `${firstCard} + ${secondCard}`;
-    const pairKey2 = `${secondCard} + ${firstCard}`;
-
-    const meaning = comboMeanings[pairKey1] || comboMeanings[pairKey2] || "Значение сочетания не указано.";
+    const comboKey = `${first} + ${second}`;
+    const reverseKey = `${second} + ${first}`;
+    const meaning = comboMeanings[comboKey] || comboMeanings[reverseKey] || "Нет толкования.";
 
     document.getElementById('card-container').innerHTML = `
-        <img src="images/${firstCard}" alt="${firstCard}">
-        <img src="images/${secondCard}" alt="${secondCard}">
-        <p><strong>${meaning}</strong></p>
+        <img src="images/${first}" alt="">
+        <img src="images/${second}" alt="">
+        <p>${meaning}</p>
     `;
 }
